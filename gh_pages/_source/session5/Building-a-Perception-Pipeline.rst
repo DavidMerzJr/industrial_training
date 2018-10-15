@@ -700,7 +700,7 @@ While this is not a filter method, it is useful when using PCL or other percepti
       cloud_topic = priv_nh_.param<std::string>("cloud_topic", "kinect/depth_registered/points");
       world_frame = priv_nh_.param<std::string>("world_frame", "kinect_link");
       camera_frame = priv_nh_.param<std::string>("camera_frame", "kinect_link");
-      voxel_leaf_size = param<float>("voxel_leaf_size", 0.002);
+      voxel_leaf_size = priv_nh_.param<float>("voxel_leaf_size", 0.002);
       x_filter_min = priv_nh_.param<float>("x_filter_min", -2.5);
       x_filter_max = priv_nh_.param<float>("x_filter_max",  2.5);
       y_filter_min = priv_nh_.param<float>("y_filter_min", -2.5);

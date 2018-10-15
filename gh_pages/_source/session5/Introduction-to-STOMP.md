@@ -32,11 +32,12 @@
     ```
     cd ~/catkin_ws/src
     git clone https://github.com/ros-industrial/industrial_moveit.git
+    cd ~/catkin_ws/src/industrial_moveit
     git checkout kinetic-devel
     ```
   * Install Missing Dependencies
     ```
-    cd ~/catkin_ws/src/4.1
+    cd ~/catkin_ws/src/4.1/src
     rosinstall . .rosinstall
     catkin build
     ```

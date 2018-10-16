@@ -218,8 +218,8 @@ The next node will subscribe to the `image` topic and execute a series of proces
 
        ```python
        def process_image(msg):
-	   try:
-	       pass
+           try:
+               pass
            except Exception as err:
                print err
        ```
@@ -360,7 +360,7 @@ The next node will subscribe to the `image` topic and execute a series of proces
        plotCircles(drawImg, pumpCircles, (255,0,0))
        if (pumpCircles is None):
            raise Exception("No pump circles found!")
-       elif len(pumpCircles[0])<>1:
+       elif len(pumpCircles[0])!=1:
            raise Exception("Wrong # of pump circles: found {} expected {}".format(len(pumpCircles[0]),1))
        else:
            pumpCircle = pumpCircles[0][0]
@@ -395,8 +395,8 @@ The next node will subscribe to the `image` topic and execute a series of proces
 
        ```python
        drawImg = cv2.drawKeypoints(drawImg, blobs, (), (0,255,0), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-       if len(blobs) <> PISTON_COUNT:
-           raise Exception("Wring # of pistons: found {} expected {}".format(len(blobs), PISTON_COUNT))
+       if len(blobs) != PISTON_COUNT:
+           raise Exception("Wrong # of pistons: found {} expected {}".format(len(blobs), PISTON_COUNT))
        pistonCenters = [(int(b.pt[0]),int(b.pt[1])) for b in blobs]
        ```
 

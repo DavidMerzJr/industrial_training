@@ -10,13 +10,12 @@ The start of most perception processing is ROS message data from a sensor.  In t
    1. Create a new directory for this exercise:
       ```
       mkdir ~/ex4.2
-      cd ~/ex4.2
+      cd ~
       cp ~/industrial_training/exercises/4.2/table.pcd .
       ```
       
-   1. Publish pointcloud messages from the pre-recorded `table.pcd` point cloud data file:
+   1. Publish pointcloud messages from the pre-recorded `table.pcd` point cloud data file (Run this from your home directory, where the file was placed):
       ```
-      cd ~
       rosrun pcl_ros pcd_to_pointcloud table.pcd 0.1 _frame_id:=map cloud_pcd:=orig_cloud_pcd
       ```
    1. Verify that the `orig_cloud_pcd` topic is being published: `rostopic list`

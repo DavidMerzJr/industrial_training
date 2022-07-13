@@ -56,7 +56,7 @@ Your goal is to create your first ROS node:
 
 
 ### Create a Node
-1. In the package folder, create the file _src/vision_node.cpp_ (using _gedit_).
+1. In the _myworkcell_core_ package folder, create the file _src/vision_node.cpp_ (using _gedit_).
   * Make sure you know the difference between the _workspace_ `src` directory and the myworkcell_core _package_ `src` directory.  This node source-file should live at: `~/ros2_ws/src/myworkcell_core/src/vision_node.cpp`.
 
 1. Add the ROS C++ header (include rclcpp.hpp).

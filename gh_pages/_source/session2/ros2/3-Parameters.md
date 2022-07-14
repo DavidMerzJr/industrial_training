@@ -61,7 +61,7 @@ So far we haven't used the request field, `base_frame`, for anything. In this ex
    rclcpp::sleep_for(std::chrono::seconds(2));
    ```
 
-1. Add an argument to your `myworkcell_node` "start" function of a string named `base_frame`, and assign the value from the argument into the service request. Make sure to update the `app->start` call in your `main()` routine to pass through the `base_frame` value you obtained.
+1. Add an argument to your `myworkcell_node` "start" function of a string named `base_frame`, and assign the value from the argument into the service request. These lines have to go after the declaration of `request` (`auto request = ...`). Make sure to update the `app->start` call in your `main()` routine to pass through the `base_frame` value you obtained.
 
    ``` c++
    void start(const std::string& base_frame)
